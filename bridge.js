@@ -41,8 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (lockTop < bridgeRect.top) lockTop = bridgeRect.top;
             if (lockTop > bridgeRect.bottom) lockTop = bridgeRect.bottom - lock.size;
 
-            lockElement.style.left = lockLeft + "px";
-            lockElement.style.top = lockTop + "px";
+lockElement.style.left = (lock.xPercent / 100) * bridgeRect.width + bridgeRect.left + "px";
+lockElement.style.top = (lock.yPercent / 100) * bridgeRect.height + bridgeRect.top + "px";
+
         });
     }
 
