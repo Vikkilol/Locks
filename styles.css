@@ -1,0 +1,14 @@
+#lock-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.lock {
+    font-size: 24px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.lock:hover {
+    transform: scale(1.2);
+}
