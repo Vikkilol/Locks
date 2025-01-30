@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+    if (window.innerWidth < 900) { // Blocks phones, allows tablets & PCs
+        document.write("<h2 style='text-align: center; padding: 20px;'>Sorry, this site is only available on larger screens.</h2>");
+        document.body.style.display = "none"; // Hides the rest of the page
+    }
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
