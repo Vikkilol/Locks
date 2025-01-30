@@ -22,9 +22,9 @@ html, body {
 
 #bridge {
     width: auto;
-    height: 100%;
-    max-width: none; /* Remove forced width restriction */
-    object-fit: contain;
+    height: 100%; /* Ensures full height usage */
+    max-width: 100%; /* Prevents stretching */
+    object-fit: contain; /* Keeps proportions correct */
 }
 
 #lock-container {
