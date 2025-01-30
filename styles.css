@@ -1,6 +1,8 @@
 #bridge-container {
     position: relative;
     width: 100%;
+    max-width: 1000px; /* Prevents the image from being too large */
+    margin: auto;
 }
 
 #bridge {
@@ -17,11 +19,9 @@
 }
 
 .lock {
-    font-size: 24px;
+    width: 30px; /* Adjust size as needed */
+    height: auto;
     position: absolute;
+    transform: translate(-50%, -50%); /* Centers the lock image */
     cursor: pointer;
-}
-
-.lock:hover {
-    transform: scale(1.2);
 }
