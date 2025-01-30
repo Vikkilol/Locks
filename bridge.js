@@ -1,27 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("lock-container");
 
-    // Example locks with preset positions and messages
+    if (!container) {
+        console.error("Lock container not found!");
+        return;
+    }
+
+    console.log("Lock container found! Adding locks...");
+
     const locks = [
-        { id: 1, x: 100, y: 300, message: "Forever Love" },
-        { id: 2, x: 250, y: 300, message: "Best Friends Forever 💕" },
-        { id: 3, x: 400, y: 200, message: "Locked in Time 🔒" },
+        { id: 1, xPercent: 10, yPercent: 30, message: "Forever Love ❤️", img: "lock1.png" },
+        { id: 2, xPercent: 50, yPercent: 60, message: "Best Friends Forever 💕", img: "lock2.png" },
+        { id: 3, xPercent: 75, yPercent: 40, message: "Locked in Time 🔒", img: "lock3.png" }
     ];
 
     locks.forEach(lock => {
-        const lockElement = document.createElement("div");
+        const lockElement = document.createElement("img");
         lockElement.className = "lock";
-        lockElement.style.left = lock.x + "px";
-        lockElement.style.top = lock.y + "px";
-        lockElement.innerHTML = "🔒"; // Lock emoji, can be replaced with an image
-        lockElement.style.position = "absolute";
-        lockElement.style.cursor = "pointer";
+        lockElement.src = lock.img; // Use custom lock image
+        lockElement.style.left = lock.xPercent + "%";
+        lockElement.style.top = lock.yPercent + "%";
 
-        // Show message when clicked
         lockElement.addEventListener("click", () => {
             alert(lock.message);
         });
 
         container.appendChild(lockElement);
     });
+
+    console.log("Locks added successfully!");
 });
