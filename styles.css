@@ -6,7 +6,7 @@
 
 .lock {
     font-size: 24px;
-    transition: transform 0.2s ease-in-out;
+    color: black;
 }
 
 .lock:hover {
