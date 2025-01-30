@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Lock container found! Adding locks...");
 
     const locks = [
-        { id: 1, xPercent: 10, yPercent: 30, message: "Forever Love ❤️", img: "IMG_0175.webp" },
+        { id: 1, xPercent: 10, yPercent: 30, message: "Forever Love ❤️", img: "Love.png" },
         { id: 2, xPercent: 50, yPercent: 60, message: "Best Friends Forever 💕", img: "lock2.png" },
         { id: 3, xPercent: 75, yPercent: 40, message: "Locked in Time 🔒", img: "lock3.png" }
     ];
