@@ -1,18 +1,29 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 #bridge-container {
     position: relative;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Prevents scrolling issues */
+    width: 100vw; /* Full screen width */
+    height: 90vh; /* Keep space for the title/text */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #bridge {
-    width: 100vw; /* Ensure it fills the full width */
-    height: auto; /* Keeps the image proportion correct */
-    max-height: 100vh; /* Prevents extreme cropping */
-    object-fit: contain; /* Ensures full image visibility without excessive cropping */
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Ensures full image visibility */
 }
 
 #lock-container {
@@ -21,12 +32,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Prevents locks from interfering with scrolling */
 }
 
 .lock {
     position: absolute;
     transform: translate(-50%, -50%);
     cursor: pointer;
-    pointer-events: auto; /* Allows locks to be clickable */
 }
