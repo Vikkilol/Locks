@@ -1,7 +1,7 @@
 #bridge-container {
     position: relative;
-    width: 100vw; /* Use full viewport width */
-    height: 100vh; /* Use full viewport height */
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
     overflow: hidden; /* Prevents scrolling */
     display: flex;
     justify-content: center;
@@ -9,9 +9,10 @@
 }
 
 #bridge {
-    max-width: 100%; /* Makes sure the image never overflows */
-    max-height: 100%; /* Ensures the image fits the screen */
-    object-fit: contain; /* Keeps the full image visible without cutting it off */
+    width: auto;
+    height: 100vh; /* Always fill the full height */
+    max-width: 100vw; /* Prevents overflow */
+    object-fit: cover; /* Ensures full image is shown without margins */
 }
 
 #lock-container {
