@@ -31,16 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 container.appendChild(lockElement);
             }
 
-            // Adjust lock position **relative to the bridge image**
-            lockElement.style.left = (lock.xPercent * bridgeRect.width / 100 + bridgeRect.left) + "px";
-            lockElement.style.top = (lock.yPercent * bridgeRect.height / 100 + bridgeRect.top) + "px";
+            // Adjust lock position **relative to the bridge image** instead of screen
+            lockElement.style.left = (lock.xPercent / 100) * bridgeRect.width + bridgeRect.left + "px";
+            lockElement.style.top = (lock.yPercent / 100) * bridgeRect.height + bridgeRect.top + "px";
         });
     }
 
     // Position locks when the page loads
     positionLocks();
 
-    // Adjust lock positions when window resizes or device rotates
-    window.addEventListener("resize", positionLocks);
-    window.addEventListener("scroll", positionLocks); // Prevent jumping while scrolling
+    // Adjust lock positions **only when resizing or rotating**, not when scrolling
+    let resizeTimeout;
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(positionLocks, 100); // Prevent excessive recalculations
+    });
+
+    window.addEventListener("orientationchange", positionLocks);
 });
