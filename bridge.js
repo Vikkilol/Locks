@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Example locks with preset positions and messages
     const locks = [
-        { id: 1, x: 100, y: 150, message: "Forever Love ❤️" },
+        { id: 1, x: 100, y: 300, message: "Forever Love ❤️" },
         { id: 2, x: 250, y: 300, message: "Best Friends Forever 💕" },
         { id: 3, x: 400, y: 200, message: "Locked in Time 🔒" },
     ];
