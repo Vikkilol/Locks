@@ -1,7 +1,8 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling */
+    overflow-x: auto; /* Allows horizontal scrolling */
+    overflow-y: hidden; /* Prevents vertical scrolling */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -11,9 +12,9 @@ html, body {
 
 #bridge-container {
     position: relative;
-    width: 100vw; /* Full screen width */
+    width: 120vw; /* Allow bridge to extend beyond screen width */
     height: 90vh; /* Keep space for the title/text */
-    overflow: hidden;
+    overflow: visible; /* Allow locks to be placed outside the initial viewport */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,8 +23,8 @@ html, body {
 #bridge {
     width: auto;
     height: 100%;
-    max-width: 100%;
-    object-fit: contain; /* Ensures full image visibility */
+    max-width: none; /* Remove forced width restriction */
+    object-fit: contain;
 }
 
 #lock-container {
