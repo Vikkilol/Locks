@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     function positionLocks() {
-        const bridgeRect = bridge.getBoundingClientRect(); // Get bridge image size and position
+        const bridgeRect = bridge.getBoundingClientRect(); // Get bridge size
 
         locks.forEach(lock => {
             let lockElement = document.getElementById(`lock-${lock.id}`);
@@ -31,15 +31,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 container.appendChild(lockElement);
             }
 
-            // Position locks relative to the bridge image
-            lockElement.style.left = bridgeRect.left + (lock.xPercent / 100) * bridgeRect.width + "px";
-            lockElement.style.top = bridgeRect.top + (lock.yPercent / 100) * bridgeRect.height + "px";
+            // Adjust lock position **relative to the bridge image**
+            lockElement.style.left = (lock.xPercent * bridgeRect.width / 100 + bridgeRect.left) + "px";
+            lockElement.style.top = (lock.yPercent * bridgeRect.height / 100 + bridgeRect.top) + "px";
         });
     }
 
     // Position locks when the page loads
     positionLocks();
 
-    // Adjust lock positions when window resizes (for mobile rotation, etc.)
+    // Adjust lock positions when window resizes or device rotates
     window.addEventListener("resize", positionLocks);
+    window.addEventListener("scroll", positionLocks); // Prevent jumping while scrolling
 });
