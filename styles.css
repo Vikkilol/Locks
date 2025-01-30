@@ -9,15 +9,15 @@ html, body {
     align-items: center;
     justify-content: flex-start;
 }
-@media (max-width: 1500px) {
-    #bridge-container, #lock-container {
-        display: none; /* Hide the bridge and locks */
-    }
+// @media (max-width: 1500px) {
+//    #bridge-container, #lock-container {
+  //      display: none; /* Hide the bridge and locks */
+//    }
     
-    #mobile-message {
-        display: flex;
-    }
-}
+ //   #mobile-message {
+//        display: flex;
+//    }
+//}
 
 #bridge-container {
     position: relative;
