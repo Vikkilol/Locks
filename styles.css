@@ -9,7 +9,7 @@ html, body {
     align-items: center;
     justify-content: flex-start;
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     #bridge-container, #lock-container {
         display: none; /* Hide the bridge and locks */
     }
