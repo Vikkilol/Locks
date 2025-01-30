@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     locks.forEach(lock => {
         const lockElement = document.createElement("img");
         lockElement.className = "lock";
-        lockElement.src = Love.img; // Use custom lock image
+        lockElement.src = lock.img; // Use custom lock image
         lockElement.style.left = lock.xPercent + "%";
         lockElement.style.top = lock.yPercent + "%";
 
