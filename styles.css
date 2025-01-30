@@ -9,15 +9,6 @@ html, body {
     align-items: center;
     justify-content: flex-start;
 }
-// @media (max-width: 1500px) {
-//    #bridge-container, #lock-container {
-  //      display: none; /* Hide the bridge and locks */
-//    }
-    
- //   #mobile-message {
-//        display: flex;
-//    }
-//}
 
 #bridge-container {
     position: relative;
@@ -48,4 +39,5 @@ html, body {
     position: absolute;
     transform: translate(-50%, -50%);
     cursor: pointer;
+    display: block; /* Ensure locks are always visible */
 }
