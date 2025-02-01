@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     function positionLocks() {
-        const bridgeRect = bridge.getBoundingClientRect(); // Get bridge size
+        const bridgeRect = bridge.getBoundingClientRect(); // Get bridge image dimensions
 
         locks.forEach(lock => {
             let lockElement = document.getElementById(`lock-${lock.id}`);
@@ -25,25 +25,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 lockElement.id = `lock-${lock.id}`;
                 lockElement.className = "lock";
                 lockElement.src = lock.img;
-                lockElement.style.width = lock.size + "px"; 
+                lockElement.style.width = lock.size + "px";
                 lockElement.style.height = "auto";
                 lockElement.addEventListener("click", () => alert(lock.message));
                 container.appendChild(lockElement);
             }
 
-            // Adjust lock position **relative to the bridge image**, ensuring it stays inside
-            let lockLeft = (lock.xPercent / 100) * bridgeRect.width + bridgeRect.left;
-            let lockTop = (lock.yPercent / 100) * bridgeRect.height + bridgeRect.top;
+            // Set the lock position relative to the bridge image itself
+            const lockLeft = lock.xPercent * bridgeRect.width / 100;
+            const lockTop = lock.yPercent * bridgeRect.height / 100;
 
-            // Ensure locks don't go outside the bridge image
-            if (lockLeft < bridgeRect.left) lockLeft = bridgeRect.left;
-            if (lockLeft > bridgeRect.right) lockLeft = bridgeRect.right - lock.size;
-            if (lockTop < bridgeRect.top) lockTop = bridgeRect.top;
-            if (lockTop > bridgeRect.bottom) lockTop = bridgeRect.bottom - lock.size;
-
-lockElement.style.left = (lock.xPercent / 100) * bridgeRect.width + bridgeRect.left + "px";
-lockElement.style.top = (lock.yPercent / 100) * bridgeRect.height + bridgeRect.top + "px";
-
+            lockElement.style.left = lockLeft + "px"; // Lock inside the bridge
+            lockElement.style.top = lockTop + "px";
         });
     }
 
