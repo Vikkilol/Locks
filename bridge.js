@@ -5,13 +5,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const popupContent = document.getElementById("popup-content");
     const closePopup = document.getElementById("close-popup");
 
-        // Ensure popup is hidden on load
-    //popupOverlay.style.display = "none";
-
     if (!container || !bridge) {
         console.error("Lock container or bridge image not found!");
         return;
     }
+
+        if (!bridge) {
+        console.error("Bridge image not found!");
+        return;
+    }
+
+    // Show mouse coordinates relative to the bridge
+    bridge.addEventListener("mousemove", (event) => {
+        const bridgeRect = bridge.getBoundingClientRect(); // Get bridge size
+        const xPercent = ((event.clientX - bridgeRect.left) / bridgeRect.width) * 100;
+        const yPercent = ((event.clientY - bridgeRect.top) / bridgeRect.height) * 100;
+
+        console.log(`X: ${xPercent.toFixed(2)}%, Y: ${yPercent.toFixed(2)}%`);
+    });
 
     console.log("Lock container found! Adding locks...");
 
