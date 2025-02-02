@@ -91,7 +91,7 @@ body::before {
 }
 
 #title {
-    font-size: 36px; /* Adjust the size */
+    font-size: 46px; /* Adjust the size */
     font-weight: bold; /* Optional: Makes it bolder */
     text-align: center; /* Optional: Centers the text */
 }
