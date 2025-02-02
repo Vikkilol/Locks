@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: 3, xPercent: 71, yPercent: 51, message: "Check out the thread for more info!", img: "lock3.png", size: 55 }
     ];
 
-    function positionLocks() {
+     function positionLocks() {
         const bridgeRect = bridge.getBoundingClientRect(); // Get bridge size
 
         locks.forEach(lock => {
@@ -30,11 +30,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 lockElement.src = lock.img;
                 lockElement.style.width = lock.size + "px"; 
                 lockElement.style.height = "auto";
+                lockElement.draggable = true; // Allow dragging
 
-                // Show popup on click
-                lockElement.addEventListener("click", () => {
-                    popupContent.innerHTML = `<p>${lock.message}</p>`; // Insert message
-                    popupOverlay.style.display = "flex"; // Show popup
+                // Handle dragging
+                lockElement.addEventListener("dragend", (event) => {
+                    const newX = ((event.clientX - bridgeRect.left) / bridgeRect.width) * 100;
+                    const newY = ((event.clientY - bridgeRect.top) / bridgeRect.height) * 100;
+
+                    lockElement.style.left = newX + "%";
+                    lockElement.style.top = newY + "%";
+
+                    console.log(`Lock ${lock.id} placed at X: ${newX.toFixed(2)}%, Y: ${newY.toFixed(2)}%`);
                 });
 
                 container.appendChild(lockElement);
@@ -45,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    
     // Close popup when "X" is clicked
     closePopup.addEventListener("click", () => {
   // Ensure popup is hidden on load
@@ -53,6 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Position locks when the page loads
     positionLocks();
+    window.addEventListener("resize", positionLocks);
+    window.addEventListener("orientationchange", positionLocks);
 
     // Recalculate positions on resize or orientation change
     window.addEventListener("resize", positionLocks);
