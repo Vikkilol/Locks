@@ -89,3 +89,13 @@ body::before {
     filter: blur(2px); /* Adjust blur strength (lower = less blur) */
     z-index: -1; /* Keeps it behind everything else */
 }
+
+#title {
+    font-size: 36px; /* Adjust the size */
+    font-weight: bold; /* Optional: Makes it bolder */
+    text-align: center; /* Optional: Centers the text */
+}
+
+#subtitle {
+    font-size: 20px; /* Adjust this for the smaller text */
+}
