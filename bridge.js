@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 container.appendChild(lockElement);
             }
 
-            lockElement.style.left = (lock.xPercent / 100) * bridgeRect.width + "px";
-            lockElement.style.top = (lock.yPercent / 100) * bridgeRect.height + "px";
+lockElement.style.left = `${bridgeRect.left + (lock.xPercent / 100) * bridgeRect.width}px`;
+lockElement.style.top = `${bridgeRect.top + (lock.yPercent / 100) * bridgeRect.height}px`;
         });
     }
 
