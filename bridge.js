@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("lock-container");
     const bridge = document.getElementById("bridge");
- const popupOverlay = document.getElementById("popup-overlay");
-    const popupContent = document.getElementById("popup-content");
-    const closePopup = document.getElementById("close-popup");
 
     if (!container || !bridge) {
         console.error("Lock container or bridge image not found!");
@@ -18,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: 3, xPercent: 71, yPercent: 51, message: "Check out the thread for more info!", img: "lock3.png", size: 55 }
     ];
 
-     function positionLocks() {
+    function positionLocks() {
         const bridgeRect = bridge.getBoundingClientRect(); // Get bridge size
 
         locks.forEach(lock => {
@@ -30,40 +27,48 @@ document.addEventListener("DOMContentLoaded", () => {
                 lockElement.src = lock.img;
                 lockElement.style.width = lock.size + "px"; 
                 lockElement.style.height = "auto";
-                lockElement.draggable = true; // Allow dragging
-
-                // Handle dragging
-                lockElement.addEventListener("dragend", (event) => {
-                    const newX = ((event.clientX - bridgeRect.left) / bridgeRect.width) * 100;
-                    const newY = ((event.clientY - bridgeRect.top) / bridgeRect.height) * 100;
-
-                    lockElement.style.left = newX + "%";
-                    lockElement.style.top = newY + "%";
-
-                    console.log(`Lock ${lock.id} placed at X: ${newX.toFixed(2)}%, Y: ${newY.toFixed(2)}%`);
-                });
+                lockElement.draggable = true; // Enable dragging
 
                 container.appendChild(lockElement);
             }
 
             lockElement.style.left = (lock.xPercent / 100) * bridgeRect.width + "px";
             lockElement.style.top = (lock.yPercent / 100) * bridgeRect.height + "px";
+
+            // Handle dragging
+            lockElement.addEventListener("dragstart", (event) => {
+                event.dataTransfer.setData("lockId", lock.id);
+            });
+
+            lockElement.addEventListener("dragover", (event) => {
+                event.preventDefault(); // Allows dropping
+            });
+
+            lockElement.addEventListener("drop", (event) => {
+                event.preventDefault();
+                const lockId = event.dataTransfer.getData("lockId");
+                const droppedLock = document.getElementById(`lock-${lockId}`);
+                
+                if (!droppedLock) return;
+
+                // Convert mouse position to bridge-relative percentage
+                const newXPercent = ((event.clientX - bridgeRect.left) / bridgeRect.width) * 100;
+                const newYPercent = ((event.clientY - bridgeRect.top) / bridgeRect.height) * 100;
+
+                // Update lock position
+                droppedLock.style.left = `${newXPercent}%`;
+                droppedLock.style.top = `${newYPercent}%`;
+
+                console.log(`Lock ${lockId} placed at X: ${newXPercent.toFixed(2)}%, Y: ${newYPercent.toFixed(2)}%`);
+            });
         });
     }
 
-    
-    // Close popup when "X" is clicked
-    closePopup.addEventListener("click", () => {
-  // Ensure popup is hidden on load
-    popupOverlay.style.display = "none";
-    });
-
-    // Position locks when the page loads
     positionLocks();
     window.addEventListener("resize", positionLocks);
     window.addEventListener("orientationchange", positionLocks);
 
     // Recalculate positions on resize or orientation change
-    window.addEventListener("resize", positionLocks);
-    window.addEventListener("orientationchange", positionLocks);
+  //  window.addEventListener("resize", positionLocks);
+  //  window.addEventListener("orientationchange", positionLocks);
 });
