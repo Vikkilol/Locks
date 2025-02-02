@@ -12,6 +12,9 @@
     max-width: 90vw; /* Ensure it scales proportionally */
     height: auto;
     display: block;
+    border: 5px solid #c4a484; /* Border width, style, and color */
+    border-radius: 10px; /* Optional: Rounds the corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Adds a soft shadow */
 }
 
 #lock-container {
