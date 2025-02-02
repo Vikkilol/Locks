@@ -73,7 +73,7 @@
 }
 
 body {
-    background-image: url('hearts-back.png'); /* Replace with your actual image file */
+    background-image: url('heart-back.png'); /* Replace with your actual image file */
     background-size: cover; /* Ensures the image covers the whole screen */
     background-position: center; /* Centers the background */
     background-repeat: no-repeat; /* Prevents tiling */
