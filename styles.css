@@ -72,9 +72,17 @@
     color: red;
 }
 
-body {
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-image: url('heartss-back.png'); /* Replace with your actual image file */
-    background-size: cover; /* Ensures the image covers the whole screen */
-    background-position: center; /* Centers the background */
-    background-repeat: no-repeat; /* Prevents tiling */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px); /* Adjust blur strength (lower = less blur) */
+    z-index: -1; /* Keeps it behind everything else */
 }
