@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("lock-container");
     const bridge = document.getElementById("bridge");
-    const popupOverlay = document.getElementById("popup-overlay");
+ const popupOverlay = document.getElementById("popup-overlay");
     const popupContent = document.getElementById("popup-content");
     const closePopup = document.getElementById("close-popup");
 
@@ -47,7 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Close popup when "X" is clicked
     closePopup.addEventListener("click", () => {
-        popupOverlay.style.display = "none"; // Hide popup
+  // Ensure popup is hidden on load
+    popupOverlay.style.display = "none";
     });
 
     // Position locks when the page loads
