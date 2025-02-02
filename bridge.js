@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const closePopup = document.getElementById("close-popup");
 
         // Ensure popup is hidden on load
-    popupOverlay.style.display = "none";
+    //popupOverlay.style.display = "none";
 
     if (!container || !bridge) {
         console.error("Lock container or bridge image not found!");
