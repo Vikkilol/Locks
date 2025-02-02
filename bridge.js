@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const locks = [
         { id: 1, xPercent: 10, yPercent: 30, message: "Forever Love ❤️", img: "lock1.png", size: 40 },
-        { id: 2, xPercent: 32, yPercent: 41, message: "Best Friends Forever 💕", img: "lock2.png", size: 50 },
+        { id: 2, xPercent: 35, yPercent: 43, message: "Best Friends Forever 💕", img: "lock2.png", size: 50 },
         { id: 3, xPercent: 75, yPercent: 40, message: "Locked in Time 🔒", img: "lock3.png", size: 35 }
     ];
 
