@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const locks = [
         { id: 1, xPercent: 10, yPercent: 30, message: "Here is an example of a message!", img: "lock1.png", size: 40 },
-        { id: 2, xPercent: 50, yPercent: 60, message: "The can be romantic or platonic.", img: "lock2.png", size: 50 },
+        { id: 2, xPercent: 50, yPercent: 60, message: "DM the event's team when you're ready", img: "lock2.png", size: 50 },
         { id: 3, xPercent: 75, yPercent: 40, message: "Check out the thread for more info!", img: "lock3.png", size: 35 }
     ];
 
