@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("lock-container");
     const bridge = document.getElementById("bridge");
+    const popupOverlay = document.getElementById("popup-overlay");
+    const popupContent = document.getElementById("popup-content");
+    const closePopup = document.getElementById("close-popup");
 
     if (!container || !bridge) {
         console.error("Lock container or bridge image not found!");
@@ -16,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     function positionLocks() {
-        const bridgeRect = bridge.getBoundingClientRect(); // Get bridge image dimensions
+        const bridgeRect = bridge.getBoundingClientRect(); // Get bridge size
 
         locks.forEach(lock => {
             let lockElement = document.getElementById(`lock-${lock.id}`);
@@ -25,20 +28,27 @@ document.addEventListener("DOMContentLoaded", () => {
                 lockElement.id = `lock-${lock.id}`;
                 lockElement.className = "lock";
                 lockElement.src = lock.img;
-                lockElement.style.width = lock.size + "px";
+                lockElement.style.width = lock.size + "px"; 
                 lockElement.style.height = "auto";
-                lockElement.addEventListener("click", () => alert(lock.message));
+
+                // Show popup on click
+                lockElement.addEventListener("click", () => {
+                    popupContent.innerHTML = `<p>${lock.message}</p>`; // Insert message
+                    popupOverlay.style.display = "flex"; // Show popup
+                });
+
                 container.appendChild(lockElement);
             }
 
-            // Set the lock position relative to the bridge image itself
-            const lockLeft = lock.xPercent * bridgeRect.width / 100;
-            const lockTop = lock.yPercent * bridgeRect.height / 100;
-
-            lockElement.style.left = lockLeft + "px"; // Lock inside the bridge
-            lockElement.style.top = lockTop + "px";
+            lockElement.style.left = (lock.xPercent / 100) * bridgeRect.width + "px";
+            lockElement.style.top = (lock.yPercent / 100) * bridgeRect.height + "px";
         });
     }
+
+    // Close popup when "X" is clicked
+    closePopup.addEventListener("click", () => {
+        popupOverlay.style.display = "none"; // Hide popup
+    });
 
     // Position locks when the page loads
     positionLocks();
