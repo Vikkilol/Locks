@@ -86,7 +86,7 @@ body::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(2px); /* Adjust blur strength (lower = less blur) */
+    filter: blur(3px); /* Adjust blur strength (lower = less blur) */
     z-index: -1; /* Keeps it behind everything else */
 }
 
