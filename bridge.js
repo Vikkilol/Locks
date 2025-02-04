@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
         positionLocks();
     };
 
-    function positionLocks() {
-        const bridgeRect = bridge.getBoundingClientRect(); // Get bridge size
+function positionLocks() {
+    const bridgeRect = bridge.getBoundingClientRect(); // Get bridge size
 
     const locks = [
         { id: 1, xPercent: 15, yPercent: 15, message: "Send messages to your favorite people ❤️", img: "lock1.png", size: 50 },
@@ -26,27 +26,32 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: 5, xPercent: 80, yPercent: 80, message: "DM the events team when you're ready!", img: "lock5.png", size: 100 }
     ];
 
-        locks.forEach(lock => {
-            let lockElement = document.getElementById(`lock-${lock.id}`);
-            if (!lockElement) {
-                lockElement = document.createElement("img");
-                lockElement.id = `lock-${lock.id}`;
-                lockElement.className = "lock";
-                lockElement.src = lock.img;
-                lockElement.style.width = lock.size + "px"; 
-                lockElement.style.height = "auto";
-                container.appendChild(lockElement);
-            }
+       locks.forEach(lock => {
+        let lockElement = document.getElementById(`lock-${lock.id}`);
+        if (!lockElement) {
+            lockElement = document.createElement("img");
+            lockElement.id = `lock-${lock.id}`;
+            lockElement.className = "lock";
+            lockElement.src = lock.img;
+            lockElement.style.width = lock.size + "px"; 
+            lockElement.style.height = "auto";
+            container.appendChild(lockElement);
+        }
 
-            // Ensure locks are positioned **relative to the bridge** and centered properly
-            lockElement.style.left = `calc(${lock.xPercent}% - ${lockElement.offsetWidth / 2}px)`;
-            lockElement.style.top = `calc(${lock.yPercent}% - ${lockElement.offsetHeight / 2}px)`;
-        });
+        // Ensure locks are positioned **relative to the bridge** and centered properly
+        lockElement.style.left = `calc(${lock.xPercent}% - ${lockElement.offsetWidth / 2}px)`;
+        lockElement.style.top = `calc(${lock.yPercent}% - ${lockElement.offsetHeight / 2}px)`;
 
-        console.log("Locks placed successfully!");
+        // **Add the click event to show the message popup**
+        lockElement.onclick = () => {
+            showPopup(lock.message);
+        };
+    });
+
+    console.log("Locks placed successfully!");
     }
 
     // Reposition locks on window resize
-    window.addEventListener("resize", positionLocks);
-    window.addEventListener("orientationchange", positionLocks);
+    //window.addEventListener("resize", positionLocks);
+    //window.addEventListener("orientationchange", positionLocks);
 });
