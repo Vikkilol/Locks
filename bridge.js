@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const locks = [
         { id: 1, xPercent: 20, yPercent: 50, message: "Send messages to your favorite people ❤️", img: "lock1.png", size: 50 },
         { id: 2, xPercent: 33, yPercent: 41, message: "Use a template, or use your own lock image!", img: "lock2.png", size: 65 },
-        { id: 3, xPercent: 73, yPercent: 41, message: "DM the events team when you're ready!", img: "lock3.png", size: 100 }
-        { id: 4, xPercent: 63, yPercent: 50, message: "DM the events team when you're ready!", img: "lock4.png", size: 50 }
+        { id: 3, xPercent: 73, yPercent: 41, message: "DM the events team when you're ready!", img: "lock3.png", size: 100 },
+        { id: 4, xPercent: 63, yPercent: 50, message: "DM the events team when you're ready!", img: "lock4.png", size: 50 },
         { id: 5, xPercent: 57, yPercent: 41, message: "DM the events team when you're ready!", img: "lock5.png", size: 60 }
     ];
 
