@@ -52,6 +52,6 @@ function positionLocks() {
     }
 
     // Reposition locks on window resize
-    //window.addEventListener("resize", positionLocks);
-    //window.addEventListener("orientationchange", positionLocks);
+    window.addEventListener("resize", positionLocks);
+    window.addEventListener("orientationchange", positionLocks);
 });
