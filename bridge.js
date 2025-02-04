@@ -19,8 +19,8 @@ function positionLocks() {
     const bridgeRect = bridge.getBoundingClientRect(); // Get bridge size
 
     const locks = [
-        { id: 1, xPercent: 17.5, yPercent: 82, message: "Send messages to your favorite people ❤️", img: "lock2r.png", size: 50 },
-        { id: 2, xPercent: 33.5, yPercent: 95, message: "Use a template, or use your own lock image!", img: "lock1r.png", size: 65 },
+        { id: 1, xPercent: 17.5, yPercent: 82, message: "Send messages to your favorite people ❤️", img: "lock2r.png", size: 45 },
+        { id: 2, xPercent: 33.75, yPercent: 95, message: "Use a template, or use your own lock image!", img: "lock1r.png", size: 65 },
         { id: 3, xPercent: 75, yPercent: 37, message: "DM the events team when you're ready!", img: "lock3r.png", size: 100 },
         { id: 4, xPercent: 63, yPercent: 50, message: "DM the events team when you're ready!", img: "lock4r.png", size: 100 },
         { id: 5, xPercent: 80, yPercent: 80, message: "DM the events team when you're ready!", img: "lock5r.png", size: 100 }
