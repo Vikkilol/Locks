@@ -51,6 +51,21 @@ function positionLocks() {
     console.log("Locks placed successfully!");
     }
 
+    function showPopup(message) {
+    const popupOverlay = document.getElementById("popup-overlay");
+    const popupContent = document.getElementById("popup-content");
+
+    if (popupOverlay && popupContent) {
+        popupContent.innerHTML = `<p>${message}</p>`;
+        popupOverlay.style.display = "flex";
+    }
+}
+
+// Close popup when "X" is clicked
+document.getElementById("close-popup").addEventListener("click", () => {
+    document.getElementById("popup-overlay").style.display = "none";
+});
+
     // Reposition locks on window resize
     window.addEventListener("resize", positionLocks);
     window.addEventListener("orientationchange", positionLocks);
