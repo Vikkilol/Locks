@@ -21,7 +21,7 @@ function positionLocks() {
     const locks = [
         { id: 1, xPercent: 17.5, yPercent: 82, message: "Send messages to your favorite people ❤️", img: "lock2r.png", size: 45 },
         { id: 2, xPercent: 33.75, yPercent: 95, message: "Use a template, or use your own lock image!", img: "lock1r.png", size: 65 },
-        { id: 3, xPercent: 50.125, yPercent: 78, message: "❤️To: RaffleSystem      From: Annonymous❤️", img: "lock3r.png", size: 100 },
+        { id: 3, xPercent: 50.125, yPercent: 78, message: "❤️To: RaffleSystem---------From: Annonymous❤️", img: "lock3r.png", size: 100 },
         { id: 4, xPercent: 71, yPercent: 95, message: "Feel free to add extra messages! They'll be sent to the users in a DM.", img: "lock4r.png", size: 100 },
         { id: 5, xPercent: 78.75, yPercent: 82.75, message: "Fill out the form when you're ready!", img: "lock5r.png", size: 100 }
     ];
