@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const bridgeTop = bridge.getBoundingClientRect().top + window.scrollY;
 
         const locks = [
-            { id: 6, column: 15.62, yAlign: 0.6, message: "❤️ pinkmelodies + ChiaraNextDoor17 ❤️", img: "lock4r.png", size: 100 },
+            { id: 6, column: 15.62, yAlign: 0.2, message: "❤️ pinkmelodies + ChiaraNextDoor17 ❤️", img: "lock4r.png", size: 100 },
             { id: 7, column: 8.58, yAlign: 0.6, message: "❤️ selfmate + centen ❤️", img: "lock4r.png", size: 100 },
             { id: 8, column: 11, yAlign: 0.8, message: "❤️ pirioca + centen ❤️", img: "lock1r.png", size: 65 },
             { id: 9, column: 6.05, yAlign: 0.8, message: "❤️ kahei + Muse ❤️", img: "lock4r.png", size: 100 },
