@@ -26,11 +26,18 @@
     pointer-events: none; /* Prevents the container from blocking clicks */
 }
 
+/*.lock {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    pointer-events: auto; 
+}
+*/
 .lock {
     position: absolute;
     transform: translate(-50%, -50%);
     cursor: pointer;
-    pointer-events: auto; /* Allows locks to be clickable */
+    pointer-events: auto;
 }
 
 #popup-overlay {
