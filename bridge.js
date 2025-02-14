@@ -31,7 +31,7 @@ function positionLocks() {
         { id: 10, xPercent: 78.75, yPercent: 103, message: "❤️To: Boyo---------------From:Anonymous❤️", img: "lock5r.png", size: 100},
         { id: 11, xPercent: 85, yPercent: 91, message: "❤️To: respectable082---------------From:Anonymous❤️", img: "lock1r.png", size: 65},
         { id: 12, xPercent: 63, yPercent: 103, message: "❤️ Harmony_Starz + Espoir ❤️", img: "lock5r.png", size: 100},
-        { id: 13, xPercent: 30, yPercent: 91, message: "❤️ centen + pinkmelodies ❤️", img: "lock5r.png", size: 100},
+        { id: 13, xPercent: 32, yPercent: 91, message: "❤️ centen + pinkmelodies ❤️", img: "lock5r.png", size: 100},
         { id: 14, xPercent: 30, yPercent: 91, message: "❤️ shadow + MK3AMisSleepy ❤️", img: "Mk3.png", size: 60}  
 /*        { id: 7, xPercent: 33.75, yPercent: 95, message: "Use a template, or use your own lock image!", img: "lock1r.png", size: 65 },
         { id: 8, xPercent: 50.125, yPercent: 78, message: "You can be annonymous, or include your name!", img: "lock3r.png", size: 100},
