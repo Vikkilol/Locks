@@ -46,7 +46,7 @@ function positionLocks() {
         { id: 12, xPercent: 33.75, yPercent: 95, message: "Use a template, or use your own lock image!", img: "lock1r.png", size: 65 },
         { id: 13, xPercent: 50.125, yPercent: 78, message: "You can be annonymous, or include your name!", img: "lock3r.png", size: 100 },
         { id: 14, xPercent: 71, yPercent: 95, message: "Feel free to add extra messages! They'll be sent to the users in a DM.", img: "lock4r.png", size: 100 },
-        { id: 15, xPercent: 78.75, yPercent: 82.75, message: "Fill out the form when you're ready!", img: "lock5r.png", size: 20 }
+        { id: 15, xPercent: 78.75, yPercent: 82.75, message: "Fill out the form when you're ready!", img: "lock5r.png", size: 45 }
         */
     ];
 
