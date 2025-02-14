@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function positionLocks() {
     const bridgeRect = bridge.getBoundingClientRect();
+
+        // Ensure lock container matches the bridge dimensions
+    container.style.width = `${bridgeRect.width}px`;
+    container.style.height = `${bridgeRect.height}px`;
+
+
     const scaleFactor = bridgeRect.width / 1600;
     
     // Number of fence sections
@@ -67,8 +73,9 @@ function positionLocks() {
         }
 
         // Position based on column number and relative to fence bars
-        const xPosition = (lock.column * sectionWidth);
-        const yPosition = (topBarY + (lock.yAlign * fenceHeight)) * bridgeRect.height;
+  const xPosition = (lock.column / 22) * bridgeRect.width; // Adjusted
+        const yPosition = (lock.yAlign * bridgeRect.height * 0.3) + (bridgeRect.height * 0.4); // Adjusted
+
         
         lockElement.style.left = `${xPosition}px`;
         lockElement.style.top = `${yPosition}px`;
