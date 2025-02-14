@@ -11,6 +11,7 @@
 #bridge {
     max-width: 90vw; /* Ensure it scales proportionally */
     height: auto;
+    aspect-ratio: 1600 / 1026; /* Adjust based on your bridge image */
     display: block;
     border: 5px solid #241807; /* Border width, style, and color */
     border-radius: 10px; /* Optional: Rounds the corners */
@@ -23,7 +24,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    pointer-events: none; /* Prevents the container from blocking clicks */
+    pointer-events: none;
 }
 
 /*.lock {
