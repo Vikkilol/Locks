@@ -23,7 +23,9 @@ function positionLocks() {
 
     const scaleFactor = bridgeRect.width / 1600; // Adjust scale based on original bridge width
 
-    // Locks array stays inside the function
+    // Get the absolute position of the bridge image
+    const bridgeTop = bridge.getBoundingClientRect().top + window.scrollY;
+
     const locks = [
         { id: 6, column: 15.62, yAlign: 0.6, message: "❤️ pinkmelodies + ChiaraNextDoor17 ❤️", img: "lock4r.png", size: 100 },
         { id: 7, column: 8.58, yAlign: 0.6, message: "❤️ selfmate + centen ❤️", img: "lock4r.png", size: 100 },
@@ -62,8 +64,8 @@ function positionLocks() {
         // Correct X-axis position (keeps horizontal alignment)
         const xPosition = (lock.column / 22) * bridgeRect.width;
 
-        // Correct Y-axis position (keeps vertical alignment)
-        const yPosition = (lock.yAlign * bridgeRect.height * 0.3) + (bridgeRect.height * 0.4);
+        // **NEW Y-axis Calculation**
+        const yPosition = bridgeTop + (lock.yAlign * bridgeRect.height * 0.3) + (bridgeRect.height * 0.4);
 
         lockElement.style.left = `${xPosition}px`;
         lockElement.style.top = `${yPosition}px`;
