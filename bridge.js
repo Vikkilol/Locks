@@ -33,7 +33,7 @@ function positionLocks() {
         { id: 12, xPercent: 63, yPercent: 103, message: "❤️ Harmony_Starz + Espoir ❤️", img: "lock5r.png", size: 100},
         { id: 13, xPercent: 31.5, yPercent: 91, message: "❤️ centen + pinkmelodies ❤️", img: "lock5r.png", size: 100},
         { id: 14, xPercent: 57, yPercent: 91, message: "❤️To: shadow---------------From:Anonymous❤️", img: "mk3.png", size: 60},
-        { id: 15, xPercent: 43, yPercent: 101, message: "❤️To: velvet---------------From:Anonymous❤️", img: "mk3.png", size: 60},
+        { id: 15, xPercent: 42, yPercent: 101, message: "❤️To: velvet---------------From:Anonymous❤️", img: "mk3.png", size: 60},
         { id: 16, xPercent: 33, yPercent: 102, message: "❤️ badcrookshanks + Boyo ❤️", img: "lock1r.png", size: 65},
         { id: 17, xPercent: 47, yPercent: 91, message: "❤️ Harmony_Starz + crimson ❤️", img: "lock5r.png", size: 100}
         
