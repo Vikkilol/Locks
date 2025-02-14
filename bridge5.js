@@ -17,41 +17,31 @@ document.addEventListener("DOMContentLoaded", () => {
 function positionLocks() {
     const bridgeRect = bridge.getBoundingClientRect();
 
-        // Ensure lock container matches the bridge dimensions
+    // Ensure lock container matches the bridge dimensions
     container.style.width = `${bridgeRect.width}px`;
     container.style.height = `${bridgeRect.height}px`;
 
+    const scaleFactor = bridgeRect.width / 1600; // Adjust scale based on original bridge width
 
-    const scaleFactor = bridgeRect.width / 1600;
-    
-    // Number of fence sections
-    const numColumns = 22;
-    const sectionWidth = bridgeRect.width / numColumns;
-    
-    // Define fence structure heights (as ratio of total height)
-    const topBarY = 0.4;    // Position of the top horizontal bar
-    const bottomBarY = 0.7;  // Position of the bottom horizontal bar
-    const fenceHeight = bottomBarY - topBarY;
-    
+    // Locks array stays inside the function
     const locks = [
-        // yAlign values: 0 = at top bar, 1 = at bottom bar
         { id: 6, column: 15.62, yAlign: 0.6, message: "❤️ pinkmelodies + ChiaraNextDoor17 ❤️", img: "lock4r.png", size: 100 },
         { id: 7, column: 8.58, yAlign: 0.6, message: "❤️ selfmate + centen ❤️", img: "lock4r.png", size: 100 },
         { id: 8, column: 11, yAlign: 0.8, message: "❤️ pirioca + centen ❤️", img: "lock1r.png", size: 65 },
-        { id: 9, column: 6.05, yAlign: 0.8, message: "❤️ kahei + Muse ❤️", img: "lock4r.png", size: 100},
-        { id: 10, column: 17.325, yAlign: 0.85, message: "❤️To: Boyo---------------From:Anonymous❤️", img: "lock5r.png", size: 100},
-        { id: 11, column: 19.58, yAlign: 0.6, message: "❤️To: respectable082---------------From:Anonymous❤️", img: "lock1r.png", size: 65},
-        { id: 12, column: 13.86, yAlign: 0.85, message: "❤️ Harmony_Starz + Espoir ❤️", img: "lock5r.png", size: 100},
-        { id: 13, column: 6.93, yAlign: 0.6, message: "❤️ centen + pinkmelodies ❤️", img: "lock5r.png", size: 100},
-        { id: 14, column: 12.54, yAlign: 0.6, message: "❤️To: shadow---------------From:Anonymous❤️", img: "mk3.png", size: 60},
-        { id: 15, column: 9.13, yAlign: 0.85, message: "❤️To: velvet---------------From:Anonymous❤️", img: "mk3.png", size: 60},
-        { id: 16, column: 7.48, yAlign: 0.8, message: "❤️ badcrookshanks + Boyo ❤️", img: "lock1r.png", size: 65},
-        { id: 17, column: 10.34, yAlign: 0.65, message: "❤️ Harmony_Starz + crimson ❤️", img: "lock5r.png", size: 100},
-        { id: 18, column: 4.84, yAlign: 0.6, message: "❤️ Day + ani07 ❤️", img: "ani-day.png", size: 50},
-        { id: 19, column: 3.102, yAlign: 0.6, message: "❤️Day + Muse❤️", img: "lock1r.png", size: 65},
-        { id: 20, column: 14.41, yAlign: 0.85, message: "❤️To: Skyles_Daughter-----------From: Anonymous❤️", img: "lock1r.png", size: 65},
-        { id: 21, column: 18.59, yAlign: 0.85, message: "❤️Boyo + badcrookshanks❤️", img: "shanksboy.png", size: 47},
-        { id: 22, column: 18.04, yAlign: 0.6, message: "❤️zena + Ahsoka❤️", img: "vik.png", size: 85}
+        { id: 9, column: 6.05, yAlign: 0.8, message: "❤️ kahei + Muse ❤️", img: "lock4r.png", size: 100 },
+        { id: 10, column: 17.325, yAlign: 0.85, message: "❤️To: Boyo---------------From:Anonymous❤️", img: "lock5r.png", size: 100 },
+        { id: 11, column: 19.58, yAlign: 0.6, message: "❤️To: respectable082---------------From:Anonymous❤️", img: "lock1r.png", size: 65 },
+        { id: 12, column: 13.86, yAlign: 0.85, message: "❤️ Harmony_Starz + Espoir ❤️", img: "lock5r.png", size: 100 },
+        { id: 13, column: 6.93, yAlign: 0.6, message: "❤️ centen + pinkmelodies ❤️", img: "lock5r.png", size: 100 },
+        { id: 14, column: 12.54, yAlign: 0.6, message: "❤️To: shadow---------------From:Anonymous❤️", img: "mk3.png", size: 60 },
+        { id: 15, column: 9.13, yAlign: 0.85, message: "❤️To: velvet---------------From:Anonymous❤️", img: "mk3.png", size: 60 },
+        { id: 16, column: 7.48, yAlign: 0.8, message: "❤️ badcrookshanks + Boyo ❤️", img: "lock1r.png", size: 65 },
+        { id: 17, column: 10.34, yAlign: 0.65, message: "❤️ Harmony_Starz + crimson ❤️", img: "lock5r.png", size: 100 },
+        { id: 18, column: 4.84, yAlign: 0.6, message: "❤️ Day + ani07 ❤️", img: "ani-day.png", size: 50 },
+        { id: 19, column: 3.102, yAlign: 0.6, message: "❤️Day + Muse❤️", img: "lock1r.png", size: 65 },
+        { id: 20, column: 14.41, yAlign: 0.85, message: "❤️To: Skyles_Daughter-----------From: Anonymous❤️", img: "lock1r.png", size: 65 },
+        { id: 21, column: 18.59, yAlign: 0.85, message: "❤️Boyo + badcrookshanks❤️", img: "shanksboy.png", size: 47 },
+        { id: 22, column: 18.04, yAlign: 0.6, message: "❤️zena + Ahsoka❤️", img: "vik.png", size: 85 }
     ];
 
     locks.forEach(lock => {
@@ -61,31 +51,23 @@ function positionLocks() {
             lockElement.id = `lock-${lock.id}`;
             lockElement.className = "lock";
             lockElement.src = lock.img;
-        }
-        
-        // Scale the lock size
-        const scaledSize = lock.size * scaleFactor;
-        lockElement.style.width = `${scaledSize}px`; 
-        lockElement.style.height = "auto";
-        
-        if (!lockElement.parentElement) {
             container.appendChild(lockElement);
         }
 
-        // Position based on column number and relative to fence bars
-  const xPosition = (lock.column / 22) * bridgeRect.width; // Adjusted
-        const yPosition = (lock.yAlign * bridgeRect.height * 0.3) + (bridgeRect.height * 0.4); // Adjusted
+        // Scale the lock size properly
+        const scaledSize = lock.size * scaleFactor;
+        lockElement.style.width = `${scaledSize}px`;
+        lockElement.style.height = "auto";
 
-        
+        // Correct X-axis position (keeps horizontal alignment)
+        const xPosition = (lock.column / 22) * bridgeRect.width;
+
+        // Correct Y-axis position (keeps vertical alignment)
+        const yPosition = (lock.yAlign * bridgeRect.height * 0.3) + (bridgeRect.height * 0.4);
+
         lockElement.style.left = `${xPosition}px`;
         lockElement.style.top = `${yPosition}px`;
-
-        lockElement.onclick = () => {
-            showPopup(lock.message);
-        };
     });
-
-    console.log("Locks placed successfully!");
 }
 
     function showPopup(message) {
