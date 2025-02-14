@@ -29,7 +29,7 @@ function positionLocks() {
         { id: 8, xPercent: 50, yPercent: 102, message: "❤️ pirioca + centen ❤️", img: "lock1r.png", size: 65 },
         { id: 9, xPercent: 27.5, yPercent: 102, message: "❤️ kahei + Muse ❤️", img: "lock4r.png", size: 100},
         { id: 10, xPercent: 78.75, yPercent: 103, message: "❤️To: Boyo---------------From:Anonymous❤️", img: "lock5r.png", size: 100},
-        { id: 11, xPercent: 85, yPercent: 91, message: "❤️To: respectable082---------------From:Anonymous❤️", img: "lock1r.png", size: 65},
+        { id: 11, xPercent: 88, yPercent: 91, message: "❤️To: respectable082---------------From:Anonymous❤️", img: "lock1r.png", size: 65},
         { id: 12, xPercent: 63, yPercent: 103, message: "❤️ Harmony_Starz + Espoir ❤️", img: "lock5r.png", size: 100},
         { id: 13, xPercent: 31.5, yPercent: 91, message: "❤️ centen + pinkmelodies ❤️", img: "lock5r.png", size: 100},
         { id: 14, xPercent: 57, yPercent: 91, message: "❤️To: shadow---------------From:Anonymous❤️", img: "mk3.png", size: 60},
@@ -39,7 +39,7 @@ function positionLocks() {
         { id: 18, xPercent: 22, yPercent: 91, message: "❤️ Day + ani07 ❤️", img: "ani-day.png", size: 50},
         { id: 19, xPercent: 14.1, yPercent: 90, message: "❤️Day + Muse❤️", img: "lock1r.png", size: 65},
         { id: 20, xPercent: 65.5, yPercent: 103, message: "❤️To: Skyles_Daughter-----------From: Anonymous❤️", img: "lock1r.png", size: 65},
-        { id: 21, xPercent: 88, yPercent: 103, message: "❤️Boyo + badcrookshanks❤️", img: "shanksboy.png", size: 47},
+        { id: 21, xPercent: 85, yPercent: 103, message: "❤️Boyo + badcrookshanks❤️", img: "shanksboy.png", size: 47},
         { id: 22, xPercent: 82, yPercent: 90, message: "❤️zena + Ahsoka❤️", img: "vik.png", size: 85}
         
 /*        { id: 7, xPercent: 33.75, yPercent: 95, message: "Use a template, or use your own lock image!", img: "lock1r.png", size: 65 },
