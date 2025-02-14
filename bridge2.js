@@ -1,0 +1,86 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("lock-container");
+    const bridge = document.getElementById("bridge");
+
+    if (!container || !bridge) {
+        console.error("Lock container or bridge image not found!");
+        return;
+    }
+
+    console.log("Lock container found! Waiting for bridge to load...");
+
+    // Ensure the bridge image is fully loaded before positioning locks
+    bridge.onload = () => {
+        console.log("Bridge image loaded! Placing locks...");
+        positionLocks();
+    };
+
+function positionLocks() {
+    const bridgeRect = bridge.getBoundingClientRect();
+    
+    const locks = [
+        { id: 6, xPercent: 71, yPercent: 89, message: "❤️ pinkmelodies + ChiaraNextDoor17 ❤️", img: "lock4r.png", size: 100 },
+        { id: 7, xPercent: 39, yPercent: 89, message: "❤️ selfmate + centen ❤️", img: "lock4r.png", size: 100 },
+        { id: 8, xPercent: 50, yPercent: 102, message: "❤️ pirioca + centen ❤️", img: "lock1r.png", size: 65 },
+        { id: 9, xPercent: 27.5, yPercent: 102, message: "❤️ kahei + Muse ❤️", img: "lock4r.png", size: 100},
+        { id: 10, xPercent: 78.75, yPercent: 103, message: "❤️To: Boyo---------------From:Anonymous❤️", img: "lock5r.png", size: 100},
+        { id: 11, xPercent: 89, yPercent: 91, message: "❤️To: respectable082---------------From:Anonymous❤️", img: "lock1r.png", size: 65},
+        { id: 12, xPercent: 63, yPercent: 103, message: "❤️ Harmony_Starz + Espoir ❤️", img: "lock5r.png", size: 100},
+        { id: 13, xPercent: 31.5, yPercent: 91, message: "❤️ centen + pinkmelodies ❤️", img: "lock5r.png", size: 100},
+        { id: 14, xPercent: 57, yPercent: 91, message: "❤️To: shadow---------------From:Anonymous❤️", img: "mk3.png", size: 60},
+        { id: 15, xPercent: 41.5, yPercent: 103, message: "❤️To: velvet---------------From:Anonymous❤️", img: "mk3.png", size: 60},
+        { id: 16, xPercent: 34, yPercent: 102, message: "❤️ badcrookshanks + Boyo ❤️", img: "lock1r.png", size: 65},
+        { id: 17, xPercent: 47, yPercent: 92, message: "❤️ Harmony_Starz + crimson ❤️", img: "lock5r.png", size: 100},
+        { id: 18, xPercent: 22, yPercent: 91, message: "❤️ Day + ani07 ❤️", img: "ani-day.png", size: 50},
+        { id: 19, xPercent: 14.1, yPercent: 90, message: "❤️Day + Muse❤️", img: "lock1r.png", size: 65},
+        { id: 20, xPercent: 65.5, yPercent: 103, message: "❤️To: Skyles_Daughter-----------From: Anonymous❤️", img: "lock1r.png", size: 65},
+        { id: 21, xPercent: 84.5, yPercent: 103, message: "❤️Boyo + badcrookshanks❤️", img: "shanksboy.png", size: 47},
+        { id: 22, xPercent: 82, yPercent: 90, message: "❤️zena + Ahsoka❤️", img: "vik.png", size: 85}
+    ];
+
+    locks.forEach(lock => {
+        let lockElement = document.getElementById(`lock-${lock.id}`);
+        if (!lockElement) {
+            lockElement = document.createElement("img");
+            lockElement.id = `lock-${lock.id}`;
+            lockElement.className = "lock";
+            lockElement.src = lock.img;
+            
+            // Scale lock size relative to bridge width
+            const scaledSize = (lock.size * bridgeRect.width) / 1600; // Using actual image width
+            lockElement.style.width = `${scaledSize}px`; 
+            lockElement.style.height = "auto";
+            container.appendChild(lockElement);
+        }
+
+        // Position using pure percentages
+        lockElement.style.left = `${lock.xPercent}%`;
+        lockElement.style.top = `${lock.yPercent}%`;
+
+        lockElement.onclick = () => {
+            showPopup(lock.message);
+        };
+    });
+
+    console.log("Locks placed successfully!");
+}
+
+    function showPopup(message) {
+        const popupOverlay = document.getElementById("popup-overlay");
+        const popupContent = document.getElementById("popup-content");
+
+        if (popupOverlay && popupContent) {
+            popupContent.innerHTML = `<p>${message}</p>`;
+            popupOverlay.style.display = "flex";
+        }
+    }
+
+    // Close popup when "X" is clicked
+    document.getElementById("close-popup").addEventListener("click", () => {
+        document.getElementById("popup-overlay").style.display = "none";
+    });
+
+    // Reposition locks on window resize
+    window.addEventListener("resize", positionLocks);
+    window.addEventListener("orientationchange", positionLocks);
+});
