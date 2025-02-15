@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { id: 19, column: 2.8, yAlign: 0.05, message: "❤️Day + Muse❤️", img: "lock1r.png", size: 85 },
             { id: 20, column: 14.41, yAlign: 0.85, message: "❤️To: Skyles_Daughter-----------From: Anonymous❤️", img: "lock1r.png", size: 65 },
             { id: 21, column: 18.59, yAlign: 0.85, message: "❤️Boyo + badcrookshanks❤️", img: "shanksboy.png", size: 55 },
-            { id: 22, column: 19.6, yAlign: 0.07, message: "❤️zena + Ahsoka❤️", img: "vik.png", size: 95 }
+            { id: 22, column: 19.8, yAlign: 0.065, message: "❤️zena + Ahsoka❤️", img: "vik.png", size: 106 }
         ];
 
         locks.forEach(lock => {
