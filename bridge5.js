@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { id: 11, column: 21.4, yAlign: 0.08, message: "❤️To: respectable082---------------From:Anonymous❤️", img: "lock1r.png", size: 85 },
             { id: 12, column: 13.86, yAlign: 0.85, message: "❤️ Harmony_Starz + Espoir ❤️", img: "lock5r.png", size: 130 },
             { id: 13, column: 6.6, yAlign: 0.07, message: "❤️ centen + pinkmelodies ❤️", img: "lock5r.png", size: 130 },
-            { id: 14, column: 14, yAlign: 0.08, message: "❤️To: shadow---------------From:Anonymous❤️", img: "mk3.png", size: 75 },
+            { id: 14, column: 14.2, yAlign: 0.07, message: "❤️To: shadow---------------From:Anonymous❤️", img: "mk3.png", size: 75 },
             { id: 15, column: 11.25, yAlign: 0.39, message: "❤️To: velvet---------------From:Anonymous❤️", img: "mk3.png", size: 75 },
             { id: 16, column: 7.5, yAlign: 0.35, message: "❤️ badcrookshanks + Boyo ❤️", img: "lock1r.png", size: 85 },
             { id: 17, column: 10.25, yAlign: 0.085, message: "❤️ Harmony_Starz + crimson ❤️", img: "lock5r.png", size: 130 },
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { id: 19, column: 2.8, yAlign: 0.05, message: "❤️Day + Muse❤️", img: "lock1r.png", size: 85 },
             { id: 20, column: 14.41, yAlign: 0.85, message: "❤️To: Skyles_Daughter-----------From: Anonymous❤️", img: "lock1r.png", size: 65 },
             { id: 21, column: 18.59, yAlign: 0.85, message: "❤️Boyo + badcrookshanks❤️", img: "shanksboy.png", size: 55 },
-            { id: 22, column: 19.5, yAlign: 0.08, message: "❤️zena + Ahsoka❤️", img: "vik.png", size: 95 }
+            { id: 22, column: 19.5, yAlign: 0.07, message: "❤️zena + Ahsoka❤️", img: "vik.png", size: 95 }
         ];
 
         locks.forEach(lock => {
