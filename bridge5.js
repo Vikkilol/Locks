@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const locks = [
             { id: 6, column: 15.62, yAlign: 0.2, message: "❤️ pinkmelodies + ChiaraNextDoor17 ❤️", img: "lock4r.png", size: 100 },
-            { id: 7, column: 9.5, yAlign: 0.45, message: "❤️ selfmate + centen ❤️", img: "lock4r.png", size: 100 },
+            { id: 7, column: 9.5, yAlign: 0.25, message: "❤️ selfmate + centen ❤️", img: "lock4r.png", size: 100 },
             { id: 8, column: 11, yAlign: 0.8, message: "❤️ pirioca + centen ❤️", img: "lock1r.png", size: 85 },
             { id: 9, column: 5.55, yAlign: 0.28, message: "❤️ kahei + Muse ❤️", img: "lock4r.png", size: 100 },
             { id: 10, column: 17.325, yAlign: 0.85, message: "❤️To: Boyo---------------From:Anonymous❤️", img: "lock5r.png", size: 130 },
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
             { id: 12, column: 13.86, yAlign: 0.85, message: "❤️ Harmony_Starz + Espoir ❤️", img: "lock5r.png", size: 130 },
             { id: 13, column: 6.6, yAlign: 0.07, message: "❤️ centen + pinkmelodies ❤️", img: "lock5r.png", size: 130 },
             { id: 14, column: 12.54, yAlign: 0.6, message: "❤️To: shadow---------------From:Anonymous❤️", img: "mk3.png", size: 60 },
-            { id: 15, column: 11.25, yAlign: 0.39, message: "❤️To: velvet---------------From:Anonymous❤️", img: "mk3.png", size: 75 },
+            { id: 15, column: 11.25, yAlign: 0.41, message: "❤️To: velvet---------------From:Anonymous❤️", img: "mk3.png", size: 75 },
             { id: 16, column: 7.5, yAlign: 0.35, message: "❤️ badcrookshanks + Boyo ❤️", img: "lock1r.png", size: 85 },
-            { id: 17, column: 10.25, yAlign: 0.08, message: "❤️ Harmony_Starz + crimson ❤️", img: "lock5r.png", size: 130 },
+            { id: 17, column: 10.25, yAlign: 0.07, message: "❤️ Harmony_Starz + crimson ❤️", img: "lock5r.png", size: 130 },
             { id: 18, column: 4.7, yAlign: 0.07, message: "❤️ Day + ani07 ❤️", img: "ani-day.png", size: 70 },
             { id: 19, column: 2.8, yAlign: 0.05, message: "❤️Day + Muse❤️", img: "lock1r.png", size: 85 },
             { id: 20, column: 14.41, yAlign: 0.85, message: "❤️To: Skyles_Daughter-----------From: Anonymous❤️", img: "lock1r.png", size: 65 },
