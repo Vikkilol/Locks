@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { id: 7, column: 9.5, yAlign: 0.25, message: "❤️ selfmate + centen ❤️", img: "lock4r.png", size: 100 },
             { id: 8, column: 12.2, yAlign: 0.065, message: "❤️ pirioca + centen ❤️", img: "lock1r.png", size: 85 },
             { id: 9, column: 5.55, yAlign: 0.28, message: "❤️ kahei + Muse ❤️", img: "lock4r.png", size: 100 },
-            { id: 10, column: 17.625, yAlign: 0.07, message: "❤️To: Boyo---------------From:Anonymous❤️", img: "lock5r.png", size: 130 },
+            { id: 10, column: 17.645, yAlign: 0.068, message: "❤️To: Boyo---------------From:Anonymous❤️", img: "lock5r.png", size: 130 },
             { id: 11, column: 21.6, yAlign: 0.065, message: "❤️To: respectable082---------------From:Anonymous❤️", img: "lock1r.png", size: 85 },
             { id: 12, column: 13.3, yAlign: 0.25, message: "❤️ Harmony_Starz + Espoir ❤️", img: "lock5r.png", size: 130 },
             { id: 13, column: 6.6, yAlign: 0.07, message: "❤️ centen + pinkmelodies ❤️", img: "lock5r.png", size: 130 },
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { id: 18, column: 4.7, yAlign: 0.07, message: "❤️ Day + ani07 ❤️", img: "ani-day.png", size: 70 },
             { id: 19, column: 2.8, yAlign: 0.05, message: "❤️Day + Muse❤️", img: "lock1r.png", size: 85 },
             { id: 20, column: 17, yAlign: 0.34, message: "❤️To: Skyles_Daughter-----------From: Anonymous❤️", img: "lock1r.png", size: 85 },
-            { id: 21, column: 18.7, yAlign: 0.29, message: "❤️Boyo + badcrookshanks❤️", img: "shanksboy.png", size: 60 },
+            { id: 21, column: 18.7, yAlign: 0.32, message: "❤️Boyo + badcrookshanks❤️", img: "shanksboy.png", size: 60 },
             { id: 22, column: 19.8, yAlign: 0.065, message: "❤️zena + Ahsoka❤️", img: "vik.png", size: 106 }
         ];
 
