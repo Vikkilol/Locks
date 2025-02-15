@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const locks = [
             { id: 6, column: 15.62, yAlign: 0.2, message: "❤️ pinkmelodies + ChiaraNextDoor17 ❤️", img: "lock4r.png", size: 100 },
-            { id: 7, column: 8.58, yAlign: 0.6, message: "❤️ selfmate + centen ❤️", img: "lock4r.png", size: 100 },
+            { id: 7, column: 8.9, yAlign: 0.25, message: "❤️ selfmate + centen ❤️", img: "lock4r.png", size: 100 },
             { id: 8, column: 11, yAlign: 0.8, message: "❤️ pirioca + centen ❤️", img: "lock1r.png", size: 85 },
             { id: 9, column: 5.55, yAlign: 0.28, message: "❤️ kahei + Muse ❤️", img: "lock4r.png", size: 100 },
             { id: 10, column: 17.325, yAlign: 0.85, message: "❤️To: Boyo---------------From:Anonymous❤️", img: "lock5r.png", size: 130 },
