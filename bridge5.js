@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { id: 18, column: 4.7, yAlign: 0.07, message: "❤️ Day + ani07 ❤️", img: "ani-day.png", size: 70 },
             { id: 19, column: 2.8, yAlign: 0.05, message: "❤️Day + Muse❤️", img: "lock1r.png", size: 85 },
             { id: 20, column: 18.41, yAlign: 0.25, message: "❤️To: Skyles_Daughter-----------From: Anonymous❤️", img: "lock1r.png", size: 85 },
-            { id: 21, column: 18.59, yAlign: 0.85, message: "❤️Boyo + badcrookshanks❤️", img: "shanksboy.png", size: 55 },
+            { id: 21, column: 18.7, yAlign: 0.25, message: "❤️Boyo + badcrookshanks❤️", img: "shanksboy.png", size: 60 },
             { id: 22, column: 19.8, yAlign: 0.065, message: "❤️zena + Ahsoka❤️", img: "vik.png", size: 106 }
         ];
 
