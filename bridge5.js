@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const bridgeTop = bridge.getBoundingClientRect().top + window.scrollY;
 
         const locks = [
-            { id: 6, column: 15.10, yAlign: 0.046, message: "❤️ pinkmelodies + ChiaraNextDoor17 ❤️", img: "lock4r.png", size: 100 },
-            { id: 7, column: 9.5, yAlign: 0.25, message: "❤️ selfmate + centen ❤️", img: "lock4r.png", size: 100 },
+            { id: 6, column: 15.10, yAlign: 0.04, message: "❤️ pinkmelodies + ChiaraNextDoor17 ❤️", img: "lock4r.png", size: 100 },
+            { id: 7, column: 9.47, yAlign: 0.29, message: "❤️ selfmate + centen ❤️", img: "lock4r.png", size: 100 },
             { id: 8, column: 12.2, yAlign: 0.065, message: "❤️ pirioca + centen ❤️", img: "lock1r.png", size: 85 },
-            { id: 9, column: 5.55, yAlign: 0.28, message: "❤️ kahei + Muse ❤️", img: "lock4r.png", size: 100 },
+            { id: 9, column: 5.55, yAlign: 0.29, message: "❤️ kahei + Muse ❤️", img: "lock4r.png", size: 100 },
             { id: 10, column: 17.78, yAlign: 0.068, message: "❤️To: Boyo---------------From:Anonymous❤️", img: "lock5r.png", size: 130 },
             { id: 11, column: 21.6, yAlign: 0.065, message: "❤️To: respectable082---------------From:Anonymous❤️", img: "lock1r.png", size: 85 },
             { id: 12, column: 13.27, yAlign: 0.3, message: "❤️ Harmony_Starz + Espoir ❤️", img: "lock5r.png", size: 130 },
